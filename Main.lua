@@ -21,10 +21,15 @@ local findFirstChildOfClass = workspace.FindFirstChildOfClass;
 function BloxEsp:GetPlots()
     local plots = {}
     for i, v in pairs(game:GetService("Workspace").Plots:GetChildren()) do 
-        table.insert(plots, v)
+       for i,v in pairs(v:GetChildren()) do 
+        if v:IsA("Part") then 
+       table.insert(plots, v)
+       end
+      end
     end
     return plots
 end
+
 
 function BloxEsp:GetPlayers()
     local players = {}
