@@ -44,5 +44,16 @@ function BloxEsp:GetVehicles()
     return vehicles
 end
 
+function BloxEsp:CreateLine(from, to, color)
+    local Line = Drawing.new("Line")
+    Line.Visible = true
+    Line.From = from
+    Line.To = to
+    Line.Color = color or Color3.new(1, 1, 1)
+    Line.Thickness = 2
+    Line.Transparency = 1
+    Line.ZIndex = 1
+    return Line
+end
 
 return BloxEsp
