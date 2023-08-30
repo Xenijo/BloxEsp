@@ -38,6 +38,4 @@ end
 end
 end
 
-BloxEsp:GetVehicles()
-table.foreach(Vehicle,print)
 return BloxEsp
