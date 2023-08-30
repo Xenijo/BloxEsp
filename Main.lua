@@ -55,7 +55,7 @@ function BloxEsp:CreateLine(from, to, color)
 end
 
 
-local  BloxEsp:CreateText(position, text, size, color, font)
+function BloxEsp:CreateText(position, text, size, color, font)
     local Text = Drawing.new("Text")
     Text.Visible = true
     Text.Position = position
