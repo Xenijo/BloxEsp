@@ -21,12 +21,14 @@ local findFirstChildOfClass = workspace.FindFirstChildOfClass;
 function BloxEsp:GetPlots()
 for i,v in pairs(game:GetService("Workspace").Plots:GetChildren()) do 
 table.insert(Plots,v)
+       return v 
   end
 end
 
 function BloxEsp:GetPlayers()
 for i,v in pairs(game:GetService("Players"):GetPlayers()) do 
 table.insert(Players,v)
+    return v 
 end
 end
 
@@ -34,8 +36,9 @@ function BloxEsp:GetVehicles()
 for i,v in pairs(game:GetService("Workspace").Plots:GetDescendants()) do 
 if v:FindFirstChild("Driver") then
 table.insert(Vehicle,v)
-end
-end
+         return v 
+     end
+  end
 end
 
 return BloxEsp
