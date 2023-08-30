@@ -45,6 +45,3 @@ function BloxEsp:GetVehicles()
 end
 
 return BloxEsp
-
-
-return BloxEsp
