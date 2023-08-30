@@ -19,26 +19,32 @@ local findFirstChild = workspace.FindFirstChild;
 local findFirstChildOfClass = workspace.FindFirstChildOfClass;
 --//functions
 function BloxEsp:GetPlots()
-for i,v in pairs(game:GetService("Workspace").Plots:GetChildren()) do 
-table.insert(Plots,v)
-       return v 
-  end
+    local plots = {}
+    for i, v in pairs(game:GetService("Workspace").Plots:GetChildren()) do 
+        table.insert(plots, v)
+    end
+    return plots
 end
 
 function BloxEsp:GetPlayers()
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do 
-table.insert(Players,v)
-    return v 
-end
+    local players = {}
+    for i, v in pairs(game:GetService("Players"):GetPlayers()) do 
+        table.insert(players, v)
+    end
+    return players
 end
 
 function BloxEsp:GetVehicles()
-for i,v in pairs(game:GetService("Workspace").Plots:GetDescendants()) do 
-if v:FindFirstChild("Driver") then
-table.insert(Vehicle,v)
-         return v 
-     end
-  end
+    local vehicles = {}
+    for i, v in pairs(game:GetService("Workspace").Plots:GetDescendants()) do 
+        if v:FindFirstChild("Driver") then
+            table.insert(vehicles, v)
+        end
+    end
+    return vehicles
 end
+
+return BloxEsp
+
 
 return BloxEsp
