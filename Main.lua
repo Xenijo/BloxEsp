@@ -54,4 +54,20 @@ function BloxEsp:CreateLine(from, to, color)
     return Line
 end
 
+
+local  BloxEsp:CreateText(position, text, size, color, font)
+    local Text = Drawing.new("Text")
+    Text.Visible = true
+    Text.Position = position
+    Text.Text = text
+    Text.Size = size or 14
+    Text.Color = color or Color3.new(1, 1, 1)
+    Text.Font = font or Drawing.Fonts[1] -- Default to UI font
+    Text.Center = true
+    Text.Outline = true
+    Text.OutlineColor = Color3.new(0, 0, 0) -- Default outline color
+    Text.ZIndex = 1
+    return Text
+end
+
 return BloxEsp
