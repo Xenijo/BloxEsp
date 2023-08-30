@@ -36,10 +36,8 @@ end
 
 function BloxEsp:GetVehicles()
     local vehicles = {}
-    for i, v in pairs(game:GetService("Workspace").Plots:GetDescendants()) do 
-        if v:FindFirstChild("Driver") then
+    for i, v in pairs(workspace.Environment.Locations.MikesMotors.Vehicles:GetChildren()) do 
             table.insert(vehicles, v)
-        end
     end
     return vehicles
 end
