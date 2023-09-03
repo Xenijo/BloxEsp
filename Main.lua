@@ -76,7 +76,7 @@ end
 function BloxEsp:IsInCameraView(position)
     local viewVector = (position - camera.CFrame.Position).unit
     local dot = viewVector:Dot(camera.CFrame.LookVector)
-    return dot > 0 -- You can adjust this threshold based on your preference
+    return dot > 0 
 end
 
 return BloxEsp
