@@ -11,12 +11,6 @@ local viewportSize = camera.ViewportSize;
 local Plots = {}
 local Players = {}
 local Vehicle = {}
---Methods
-local wtvp = camera.WorldToViewportPoint;
-local isA = workspace.IsA;
-local getPivot = workspace.GetPivot;
-local findFirstChild = workspace.FindFirstChild;
-local findFirstChildOfClass = workspace.FindFirstChildOfClass;
 --//functions
 function BloxEsp:GetPlots()
     local plots = {}
